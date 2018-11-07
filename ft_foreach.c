@@ -6,11 +6,11 @@
 /*   By: ezonda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 16:56:26 by ezonda            #+#    #+#             */
-/*   Updated: 2018/11/06 17:54:58 by ezonda           ###   ########.fr       */
+/*   Updated: 2018/11/07 10:45:16 by ezonda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int lenght, void(*f)(int))
+void	ft_foreach(int *tab, int lenght, void (*f)(int))
 {
 	int i;
 

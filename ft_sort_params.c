@@ -1,9 +1,16 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ezonda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/07 09:07:11 by ezonda            #+#    #+#             */
+/*   Updated: 2018/11/07 11:33:42 by ezonda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -29,16 +36,12 @@ void	ft_swap(char **a, char **b)
 int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
-	int n;
 
 	i = 0;
-	n = 0;
-	while (s1[i] != '\0')
+	while ((s1[i] != '\0') && (s2[i] != '\0') && (s1[i] == s2[i]))
 		i++;
-	while (s2[i] != '\0')
-		n++;
-	return (i - n);
-
+	i = s1[i] - s2[i];
+	return (i);
 }
 
 int		main(int ac, char **av)
